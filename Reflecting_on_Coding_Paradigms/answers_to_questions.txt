@@ -1,0 +1,57 @@
+How does this solution demonstrate the four pillars of OOP? (It may not demonstrate all of them, describe only those that apply)
+    Four Pillars of OOP 
+
+        1. Encapsulation: By defining classes like Podracer, AnakinsPod, and SebulbasPod, 
+                        we're encapsulating specific attributes (like max_speed, price, and condition) 
+                        and behaviors (such as repair(), boost(), and flame_jet()) relevant to podracers. 
+                        This feels right because we're keeping data and methods that operate on that data together, 
+                        which makes it easier to understand and manage.
+
+        2. Abstraction: This is a bit harder to see directly, 
+                        but by using methods like repair() or boost(), 
+                        we're hiding the complexity from the user. 
+                        When Watto repairs a podracer, he doesn't need to know what's happening under the hood; 
+                        calling repair() does the job. This seems useful for keeping things simple on the surface.
+
+        3. Inheritance: This one feels more straightforward. 
+                        AnakinsPod and SebulbasPod inherit from Podracer, 
+                        which means they get all the attributes and methods from Podracer but can also have their own unique behaviors or even override some behaviors. 
+                        It's like getting a base model of a podracer and then adding special features to specific models.
+
+        4. Polymorphism: I think this concept isn't directly demonstrated in the provided code, 
+                        but if there were a function that takes a Podracer object and calls its repair() method, 
+                        both AnakinsPod and SebulbasPod could be passed to it, thanks to them being subclasses of Podracer. 
+                        This seems like it would be really useful for writing general code that works with different subclasses.
+
+Would it have been easier to implement a solution to this problem using a different coding style? Why or why not?
+    It's hard to imagine solving this particular problem with a functional programming style since we're dealing with objects (podracers) that have states. 
+    It feels like OOP is a natural fit here because we're modeling real-world objects. 
+    Maybe for processes that are more about transformations or calculations, a functional style would be easier?
+
+How in particular did Object Oriented Programming assist in the solving of this problem?
+    Using OOP made it easier to organize thoughts and code around "things" (podracers) and their actions. 
+    It kind of mirrors how we might think about the problem in real life, 
+    with different types of podracers and operations we can perform on them.
+
+Reflection
+
+Take some time now to think about the lessons we've just covered. Prompting questions have been provided, but reflections do not need to be limited to only their answers.
+
+    Is one of these coding paradigms "better" than the other? Why or why not?
+        It probably depends on the problem. For organizing things like an inventory of podracers, 
+        OOP seems really intuitive. But I've heard that functional programming can be better for tasks where you're transforming data through a series of operations,
+        especially because it avoids changing state and side effects, which sounds safer in some scenarios.
+    
+    Given the opportunity to work predominantly using either of these coding paradigms, which seems more appealing? Why?
+        Right now, OOP seems more appealing for problems that involve managing and interacting with objects. 
+        It feels like a natural way to model many kinds of software problems.
+
+    Now being more familiar with these coding paradigms, what tasks/features/pieces of logic would be best handled using functional programming? Object Oriented Programming?
+        Functional programming might be best for data processing tasks or situations where immutability is key. 
+        OOP seems great for when you have complex entities with various states and behaviors.
+
+    Personally, which of these styles takes more work to understand? What should be done in order to deepen understanding related to this paradigm?
+        Personally, wrapping my head around the idea of not changing state as in functional programming takes more work. 
+        It feels like a different way of thinking compared to the intuitive approach of modifying objects in OOP. 
+        Deepening understanding probably involves building more projects with each paradigm and seeing the strengths and challenges firsthand.
+
